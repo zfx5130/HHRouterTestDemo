@@ -1,0 +1,14 @@
+//
+//  HHRouterTestDemo.pch
+//  HHRouterTestDemo
+//
+//  Created by admin on 17/3/8.
+//  Copyright © 2017年 thomas. All rights reserved.
+//
+
+#ifndef HHRouterTestDemo_pch
+#define HHRouterTestDemo_pch
+
+#import "Macro.h"
+
+#endif /* HHRouterTestDemo_pch */

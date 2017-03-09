@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TgU-sv-wB1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="o9c-ov-hjx">
+            <objects>
+                <navigationController id="TgU-sv-wB1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="neJ-fo-cfF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Uer-Rs-hwT" kind="relationship" relationship="rootViewController" id="1JX-8J-PVM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ecn-qI-otD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-753" y="155"/>
+        </scene>
+        <!--UserA-->
+        <scene sceneID="TNH-fG-msz">
+            <objects>
+                <viewController id="Uer-Rs-hwT" customClass="UserAViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ofx-EW-s1W"/>
+                        <viewControllerLayoutGuide type="bottom" id="h45-5t-IX7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Ha-gQ-6zg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpV-T9-o7M">
+                                <rect key="frame" x="62.5" y="179" width="250" height="57"/>
+                                <color key="backgroundColor" red="1" green="0.29803921570000003" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="F4E-hF-OxK"/>
+                                    <constraint firstAttribute="height" constant="57" id="Ms7-1c-fEb"/>
+                                </constraints>
+                                <state key="normal" title="Push BController(不带参数)"/>
+                                <connections>
+                                    <action selector="pushUserBController:" destination="Uer-Rs-hwT" eventType="touchUpInside" id="oge-C1-qGB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKi-PL-Nvq">
+                                <rect key="frame" x="62.5" y="285" width="250" height="57"/>
+                                <color key="backgroundColor" red="1" green="0.29803921570000003" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="3TI-Jx-Pbu"/>
+                                    <constraint firstAttribute="height" constant="57" id="I7K-AI-8hR"/>
+                                </constraints>
+                                <state key="normal" title="Push CController(带参数userId)"/>
+                                <connections>
+                                    <action selector="pushUserCController:" destination="Uer-Rs-hwT" eventType="touchUpInside" id="jq5-Lh-BAG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcZ-I4-OIz">
+                                <rect key="frame" x="62" y="396" width="250" height="57"/>
+                                <color key="backgroundColor" red="1" green="0.29803921570000003" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="Eic-Uf-haB"/>
+                                    <constraint firstAttribute="width" constant="250" id="GZP-J8-56Z"/>
+                                </constraints>
+                                <state key="normal" title="Push DController(Block实现)"/>
+                                <connections>
+                                    <action selector="pushUserDController:" destination="Uer-Rs-hwT" eventType="touchUpInside" id="Ady-DS-bpM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.9674564081" blue="0.3082986016" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="JcZ-I4-OIz" firstAttribute="top" secondItem="lKi-PL-Nvq" secondAttribute="bottom" constant="54" id="5xu-aR-NFZ"/>
+                            <constraint firstItem="lKi-PL-Nvq" firstAttribute="top" secondItem="jpV-T9-o7M" secondAttribute="bottom" constant="49" id="U98-oS-twA"/>
+                            <constraint firstItem="jpV-T9-o7M" firstAttribute="centerX" secondItem="4Ha-gQ-6zg" secondAttribute="centerX" id="UZW-Jl-Bft"/>
+                            <constraint firstItem="JcZ-I4-OIz" firstAttribute="centerX" secondItem="lKi-PL-Nvq" secondAttribute="centerX" id="csR-fT-Xfb"/>
+                            <constraint firstItem="jpV-T9-o7M" firstAttribute="top" secondItem="Ofx-EW-s1W" secondAttribute="bottom" constant="115" id="kou-Do-CFR"/>
+                            <constraint firstItem="lKi-PL-Nvq" firstAttribute="centerX" secondItem="jpV-T9-o7M" secondAttribute="centerX" id="vpT-rX-iob"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="UserA" id="jyf-l7-j4X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i8u-yo-6gh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.8" y="152.47376311844079"/>
+        </scene>
+    </scenes>
+</document>
